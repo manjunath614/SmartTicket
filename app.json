@@ -1,0 +1,50 @@
+{
+  "expo": {
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "The app accesses your photos to let you share them with your friends."
+        }
+      ]
+    ],
+    "name": "myimagepicker",
+    "slug": "myimagepicker",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icn.png",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/splsh.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icn.png",
+        "backgroundColor": "#FFFFFF"
+      },
+      "permissions": [
+        "android.permission.RECORD_AUDIO"
+      ],
+      "package": "com.manjunath6147.myimagepicker"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "cba09d23-8588-4793-bb6d-4b53de982694"
+      }
+    }
+  }
+}
