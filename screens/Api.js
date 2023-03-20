@@ -119,7 +119,7 @@ export const LoginApi = async (data) =>{
 
 export const ChangePasswordApi = async (data) =>{
   const res = await axios({
-    method :'post',
+    method :'patch',
     url:'https://amsweets.in/chng/Password',
     data:data
   });

@@ -6,7 +6,7 @@ import Ionicons from '@expo/vector-icons/Ionicons';
 import { darkPink } from "../components/Constants";
 import Btn from "../components/Btn";
 import { useNavigation } from "@react-navigation/native";
-import { setPasswordApi } from "./Api";
+import { ChangePasswordApi, setPasswordApi } from "./Api";
 
 
 const ChangePasswordConductor =({route})=>{
@@ -26,13 +26,13 @@ const ChangePasswordConductor =({route})=>{
           if(password == confirmPassword && password != '' && confirmPassword != '' && password.length>=8)
           {
             //Alert.alert('Success!!','Redirecting to Login Screen.');
-            await setPasswordApi({
+            await ChangePasswordApi({
               "Id":id,
               "Password":password,
               "flag":Flag
             })
             .then(res=>{console.log(res.data.message)
-              if(res.data.message == 'Password Set'){
+              if(res.data.message == 'Employee Password Changed'){
                alert('Password is changed!');
               }
               else alert('Try again');
